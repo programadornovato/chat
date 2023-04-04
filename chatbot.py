@@ -1,7 +1,7 @@
 from rivescript import RiveScript
 
 bot = RiveScript()
-bot.load_file('ejemplo.rivehola')
+bot.load_file('ejemplo.rive')
 bot.sort_replies()
 
 while True:
