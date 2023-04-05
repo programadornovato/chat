@@ -1,6 +1,47 @@
+//Disparador 
 + hola
-- Hola, Soy un robot
+- Hola humano, Soy un robot
+- Hola como estas
 
+//Agregar nuevas lineas (retorno de carro).
++ hola
+- Hola, Soy un robot, esta es la informacion que te puedo ofrecer\n
+^ Nuestros telefonos\n
+^ Nuestra direccion\n
+^ Entregas\n
+^ Pagina web\n
+^ Horarios\n
+^ Menu\n
+
+//Usar comodines * para que las frases sean mas flexibles
++ hay alguien*
+- si estoy yo soy un robot
+
+//Opcionales
++ (telefono|celular|cel)
+- Nuestro telefono es 725648221
+
+//Redirecciones
++ hola
+- Hola soy un robot
+- ¿Como estas?
+- ¿Que paso?
+
++ hey
+@ hola
+
++ alguien aqui
+@ hola
+
+//Variables
++ lunes
+- <bot lunes>
+
+! var lunes = -
+^ Menu del Lunes \n 
+^ Chiles en nogada 20.50 \n
+^ Chilaquiles 15.50 \n
+//En caso de no encontrar ninguna coincidencia
 + *
 - Recuerda que soy un robot, me podrías preguntar de otra forma
 - Intenta hacer tu pregunta de otra manera.
